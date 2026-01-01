@@ -63,7 +63,13 @@
 
         <!-- PRODUTOS -->
         <section id="produtos">
-            <h2>3️⃣ Produtos</h2>
+            <div id="formproduto">
+  <input type="text" id="nomeProduto" placeholder="Nome do produto">
+  <input type="number" id="precoProduto" placeholder="Preço">
+  <input type="number" id="quantidadeProduto" placeholder="Quantidade">
+
+  <button onclick="adicionarProduto()">Adicionar Produto</button>
+</div>
             <ul>
                 <li>Adicionar produto</li>
                 <li>Editar produto</li>
@@ -253,10 +259,24 @@ function login() {
     document.getElementById("msg").innerText = "Email ou senha incorretos";
   }
 }
-</script>
+  <script>
+  function adicionarProduto() {
+    const nome = document.getElementById("nomeProduto").value;
+    const preco = document.getElementById("precoProduto").value;
+    const quantidade = document.getElementById("quantidadeProduto").value;
 
+    if (!nome || !preco || !quantidade) {
+      alert("Preencha todos os campos");
+      return;
+    }
+
+    alert("Produto adicionado: " + nome);
+   }
+</script>
+    
 </body>
 </html>
+
 
 
 
