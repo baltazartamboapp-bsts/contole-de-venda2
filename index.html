@@ -1,0 +1,227 @@
+< !DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Vendas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Controle de Vendas</h1>
+    </header>
+
+    <nav>
+        <a href="#login">Login & Segurança</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#vendas">Vendas</a>
+        <a href="#scanner">Scanner</a>
+        <a href="#moedas">Moedas</a>
+        <a href="#relatorios">Relatórios</a>
+        <a href="#historico">Histórico</a>
+        <a href="#calculadora">Calculadora</a>
+        <a href="#idiomas">Idiomas</a>
+        <a href="#configuracoes">Configurações</a>
+        <a href="#suporte">Suporte</a>
+        <a href="#faq">FAQ</a>
+        <a href="#sobre">Sobre</a>
+    </nav>
+
+    <main>
+        <!-- LOGIN & SEGURANÇA -->
+        <section id="login">
+            <h2>1️⃣ Login & Segurança</h2>
+            <ul>
+                <li>Login com Email e Senha</li>
+                <li>Login com Número de Telefone (SMS)</li>
+                <li>Login com Google</li>
+                <li>Login com Facebook</li>
+                <li>Recuperação de senha</li>
+                <li>Proteção de dados do usuário</li>
+                <li>Histórico protegido por senha / biometria</li>
+            </ul>
+        </section>
+
+        <!-- DASHBOARD -->
+        <section id="dashboard">
+            <h2>2️⃣ Dashboard</h2>
+            <p>Visão geral de vendas</p>
+            <p>Total diário / mensal</p>
+            <p>Produtos mais vendidos</p>
+            <p>Alertas de stock baixo</p>
+            <p>Atalhos rápidos</p>
+        </section>
+
+        <!-- PRODUTOS -->
+        <section id="produtos">
+            <h2>3️⃣ Produtos</h2>
+            <ul>
+                <li>Adicionar produto</li>
+                <li>Editar produto</li>
+                <li>Apagar produto (com confirmação)</li>
+                <li>Definir preço</li>
+                <li>Definir quantidade</li>
+                <li>Código de barras</li>
+                <li>Scanner para buscar produto</li>
+                <li>Categorias de produto</li>
+                <li>📏 Unidades suportadas: Unidade, Kg, Tonelada, Litros, Centímetros, Metros</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="produto-lista"></tbody>
+            </table>
+            <button onclick="adicionarProduto()">Adicionar Produto</button>
+        </section>
+
+        <!-- VENDAS -->
+        <section id="vendas">
+            <h2>4️⃣ Vendas</h2>
+            <ul>
+                <li>Criar venda</li>
+                <li>Selecionar produto</li>
+                <li>Definir quantidade</li>
+                <li>Cálculo automático do total</li>
+                <li>Desconto</li>
+                <li>Atualização automática do stock</li>
+                <li>Conversão de moeda na venda</li>
+            </ul>
+        </section>
+
+        <!-- SCANNER -->
+        <section id="scanner">
+            <h2>5️⃣ Scanner de Código de Barras</h2>
+            <ul>
+                <li>Acesso à câmera</li>
+                <li>Detecção em ~1 segundo</li>
+                <li>Busca automática do produto</li>
+                <li>Funciona em navegador e APK</li>
+            </ul>
+        </section>
+
+        <!-- MOEDAS -->
+        <section id="moedas">
+            <h2>6️⃣ Moedas</h2>
+            <ul>
+                <li>Conversão de +30 moedas</li>
+                <li>Moeda base configurável</li>
+                <li>Atualização automática das taxas</li>
+                <li>Mostrar total em várias moedas</li>
+            </ul>
+        </section>
+
+        <!-- RELATÓRIOS -->
+        <section id="relatorios">
+            <h2>7️⃣ Relatórios</h2>
+            <ul>
+                <li>Relatório de entradas</li>
+                <li>Relatório de saídas</li>
+                <li>Relatório de movimento</li>
+                <li>Relatório por produto</li>
+                <li>Relatório por data</li>
+                <li>Exportar PDF</li>
+                <li>Exportar Excel</li>
+            </ul>
+        </section>
+
+        <!-- HISTÓRICO -->
+        <section id="historico">
+            <h2>8️⃣ Histórico</h2>
+            <ul>
+                <li>Histórico de vendas</li>
+                <li>Histórico de compras</li>
+                <li>Histórico por usuário</li>
+                <li>Filtro por data</li>
+                <li>Acesso protegido por senha</li>
+            </ul>
+        </section>
+
+        <!-- CALCULADORA -->
+        <section id="calculadora">
+            <h2>9️⃣ Calculadora de Negócio</h2>
+            <ul>
+                <li>Preço de custo</li>
+                <li>Margem de lucro (%)</li>
+                <li>Preço de venda sugerido</li>
+                <li>Lucro total estimado</li>
+            </ul>
+        </section>
+
+        <!-- IDIOMAS -->
+        <section id="idiomas">
+            <h2>1️⃣0️⃣ Idiomas</h2>
+            <ul>
+                <li>Português</li>
+                <li>Francês</li>
+                <li>Espanhol</li>
+                <li>Inglês Americano</li>
+                <li>Zulu</li>
+                <li>Swahili</li>
+                <li>Shona</li>
+                <li>Inglês da Nigéria</li>
+                <li>Inglês da África do Sul</li>
+            </ul>
+        </section>
+
+        <!-- CONFIGURAÇÕES -->
+        <section id="configuracoes">
+            <h2>1️⃣1️⃣ Configurações</h2>
+            <ul>
+                <li>Idioma</li>
+                <li>Moeda padrão</li>
+                <li>Tema claro / escuro</li>
+                <li>Dados da empresa</li>
+                <li>Backup automático</li>
+            </ul>
+        </section>
+
+        <!-- SUPORTE -->
+        <section id="suporte">
+            <h2>1️⃣2️⃣ Suporte</h2>
+            <ul>
+                <li>WhatsApp: 845234933</li>
+                <li>Email: baltazartambo026@gmail.com</li>
+                <li>Botão direto para contacto</li>
+                <li>Formulário interno</li>
+            </ul>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <h2>1️⃣3️⃣ FAQ</h2>
+            <ul>
+                <li>Login</li>
+                <li>Produtos</li>
+                <li>Scanner</li>
+                <li>Vendas</li>
+                <li>Moedas</li>
+                <li>Relatórios</li>
+                <li>Histórico</li>
+                <li>Idiomas</li>
+                <li>Calculadora</li>
+                <li>Suporte</li>
+            </ul>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre">
+            <h2>1️⃣4️⃣ Sobre o App</h2>
+            <p>Nome do App: Controle de Vendas</p>
+            <p>Versão: 1.0.0</p>
+            <p>Desenvolvedor: Baltazar</p>
+            <p>Email: baltazartambo026@gmail.com</p>
+            <p>WhatsApp: 845234933</p>
+            <p>Informações legais: Todos os dados dos usuários são protegidos. Nenhuma informação será compartilhada sem consentimento.</p>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
