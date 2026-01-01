@@ -107,6 +107,19 @@ function criarVenda() { /* Futuro */ }
 function iniciarScanner() { /* Futuro */ }
 function converterMoeda() { /* Futuro */ }
 
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+onAuthStateChanged(auth, (user) => {
+  if (!user) {
+    // Se NÃO estiver logado
+    if (!window.location.pathname.includes("login")) {
+      window.location.href = "/controle-de-venda2/login.html";
+    }
+  } else {
+    console.log("Usuário autenticado:", user.email);
+  }
+});
+
 
 
 
