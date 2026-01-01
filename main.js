@@ -1,11 +1,12 @@
-alert("MAIN.JS ESTÁ RODANDO");
-console.log("MAIN.JS ESTÁ RODANDO");
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import {
   getAuth,
   signInWithEmailAndPassword,
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+alert("MAIN.JS ESTÁ RODANDO");
+console.log("MAIN.JS ESTÁ RODANDO");
 console.log("firebase MAIN.JS CARREGADO COM SUCESSO");
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -122,6 +123,7 @@ function removerProduto(index) {
 function criarVenda() { /* Futuro */ }
 function iniciarScanner() { /* Futuro */ }
 function converterMoeda() { /* Futuro */ }
+
 
 
 
