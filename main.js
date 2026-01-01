@@ -106,9 +106,10 @@ function removerProduto(index) {
 function criarVenda() { /* Futuro */ }
 function iniciarScanner() { /* Futuro */ }
 function converterMoeda() { /* Futuro */ }
-
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  onAuthStateChanged
 onAuthStateChanged(auth, (user) => {
   if (!user) {
     // Se NÃO estiver logado
@@ -119,6 +120,7 @@ onAuthStateChanged(auth, (user) => {
     console.log("Usuário autenticado:", user.email);
   }
 });
+
 
 
 
