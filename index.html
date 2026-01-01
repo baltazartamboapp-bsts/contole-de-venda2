@@ -89,9 +89,18 @@
             <button onclick="adicionarProduto()">Adicionar Produto</button>
         </section>
 
-        <!-- VENDAS -->
-        <section id="vendas">
-            <h2>4️⃣ Vendas</h2>
+        <!-- LOGIN -->
+        <section id="login">
+          <h2>Login</h2>
+
+  <input type="email" id="email" placeholder="Email"><br><br>
+  <input type="password" id="senha" placeholder="Senha"><br><br>
+
+  <button onclick="login()">Entrar</button>
+  <p id="msg"></p>
+</section>
+        <!-- VENDA -->
+        <section id="vendas" style="display:none;"
             <ul>
                 <li>Criar venda</li>
                 <li>Selecionar produto</li>
@@ -220,7 +229,7 @@
 
         <!-- SOBRE -->
         <section id="sobre">
-            <h2>1️⃣4️⃣ Sobre o App</h2>
+            <h2>4️⃣ Sobre o App</h2>
             <p>Nome do App: Controle de Vendas</p>
             <p>Versão: 1.0.0</p>
             <p>Desenvolvedor: Baltazar</p>
@@ -231,8 +240,24 @@
     </main>
 
     <script type="module" src="main.js"></script>
+
+    <script>
+function login() {
+  let email = document.getElementById("email").value;
+  let senha = document.getElementById("senha").value;
+
+  if (email === "admin@email.com" && senha === "1234") {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("vendas").style.display = "block";
+  } else {
+    document.getElementById("msg").innerText = "Email ou senha incorretos";
+  }
+}
+</script>
+
 </body>
 </html>
+
 
 
 
