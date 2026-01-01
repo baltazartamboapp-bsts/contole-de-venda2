@@ -1,7 +1,8 @@
-console.log("MAIN.JS CARREGADO COM SUCESSO");
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+console.log("MAIN.JS CARREGADO COM SUCESSO");
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -20,6 +21,26 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const btnLogin = document.getElementById("btnLogin");
+const msg = document.getElementById("loginMsg");
+
+if (btnLogin) {
+  btnLogin.addEventListener("click", () => {
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+
+    signInWithEmailAndPassword(auth, email, senha)
+      .then((userCredential) => {
+        msg.innerText = "Login feito com sucesso!";
+        console.log("Usuário:", userCredential.user);
+      })
+      .catch((error) => {
+        msg.innerText = "Erro: " + error.message;
+        console.error(error);
+      });
+  });
+}
+
 console.log("firebase pronto");
 // Lista de produtos
 const produtos = [];
@@ -85,6 +106,7 @@ function removerProduto(index) {
 function criarVenda() { /* Futuro */ }
 function iniciarScanner() { /* Futuro */ }
 function converterMoeda() { /* Futuro */ }
+
 
 
 
