@@ -1,3 +1,24 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyABVuwoNX3JsZGHgycG7CtTCsGnlKI67r0",
+  authDomain: "controle-de-venda-993ee.firebaseapp.com",
+  projectId: "controle-de-venda-993ee",
+  storageBucket: "controle-de-venda-993ee.firebasestorage.app",
+  messagingSenderId: "99668722986",
+  appId: "1:99668722986:web:aa7516531a61094e024a53",
+  measurementId: "G-5BNHFN5W1W"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 // Lista de produtos
 const produtos = [];
 
@@ -62,3 +83,4 @@ function removerProduto(index) {
 function criarVenda() { /* Futuro */ }
 function iniciarScanner() { /* Futuro */ }
 function converterMoeda() { /* Futuro */ }
+
