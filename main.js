@@ -8,6 +8,17 @@ console.log("MAIN.JS CARREGADO COM SUCESSO");
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+onAuthStateChanged(auth, (user) => {
+  if (!user) {
+    // Se NÃO estiver logado
+    if (!window.location.pathname.includes("login")) {
+      window.location.href = "/controle-de-venda2/login.html";
+    }
+  } else {
+    console.log("Usuário autenticado:", user.email);
+  }
+});
 const firebaseConfig = {
   apiKey: "AIzaSyABVuwoNX3JsZGHgycG7CtTCsGnlKI67r0",
   authDomain: "controle-de-venda-993ee.firebaseapp.com",
@@ -106,20 +117,8 @@ function removerProduto(index) {
 function criarVenda() { /* Futuro */ }
 function iniciarScanner() { /* Futuro */ }
 function converterMoeda() { /* Futuro */ }
-import {
-  getAuth,
-  signInWithEmailAndPassword,
-  onAuthStateChanged
-onAuthStateChanged(auth, (user) => {
-  if (!user) {
-    // Se NÃO estiver logado
-    if (!window.location.pathname.includes("login")) {
-      window.location.href = "/controle-de-venda2/login.html";
-    }
-  } else {
-    console.log("Usuário autenticado:", user.email);
-  }
-});
+
+
 
 
 
