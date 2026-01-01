@@ -4,7 +4,7 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-console.log("MAIN.JS CARREGADO COM SUCESSO");
+console.log("firebase MAIN.JS CARREGADO COM SUCESSO");
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -120,6 +120,7 @@ function removerProduto(index) {
 function criarVenda() { /* Futuro */ }
 function iniciarScanner() { /* Futuro */ }
 function converterMoeda() { /* Futuro */ }
+
 
 
 
